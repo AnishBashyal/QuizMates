@@ -1,0 +1,27 @@
+.alert {
+  width: 80%;
+  margin: 5px;
+}
+.overflow-auto {
+  width: 600px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.card-body {
+  height: 400px;
+}
+
+/* .my-card {
+  background-color: antiquewhite;
+}
+
+.my-card-2 {
+  background-color: floralwhite;
+} */
+body {
+  /* background-image: url("/static/img/background.jpeg"); */
+  background-image: url("/static/img/background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

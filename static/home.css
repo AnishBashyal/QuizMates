@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  background-image: url("/static/img/background1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  text-align: center; /* Center text in the body */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 30px;
+  padding: 20px;
+  position: relative; /* Add position relative to the container */
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Button styling */
+button,
+a,
+.button {
+  background-color: #00008b; /* Updated color to dark blue */
+  color: gold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px 0;
+  position: relative; /* Add position relative to the buttons */
+}
+
+/* Header and top-right buttons */
+.header {
+  background-color: blue;
+  color: gold;
+  padding: 20px;
+  text-align: right;
+  position: relative; /* Add position relative to the header */
+}
+
+/* Signup or Guest button */
+.signup-button {
+  background-color: #00008b; /* Updated color to dark blue */
+  color: gold;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative; /* Add position relative to the signup button */
+}
+
+.signup-button:hover {
+  background-color: gold;
+  color: #00008b; /* Updated color to dark blue */
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.container input[type="text"],
+.container input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.container button {
+  display: block;
+  width: 100%;
+  padding: 5px;
+  background-color: #594aa3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.container button:hover {
+  /* background-color: #594aa3; */
+  background-color: #47229c; /* Updated to dark blue */
+}

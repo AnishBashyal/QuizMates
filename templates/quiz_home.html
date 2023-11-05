@@ -1,0 +1,68 @@
+{% extends "layout.html" %} {% block header %}
+<link
+  href="{{url_for('static', filename = 'home.css')}}"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block body %}
+
+<div class="container">
+  <div class="create-room">
+    <h1>Create Private Room</h1>
+    <form method="post" action="{{url_for('quiz_room.create_room')}}">
+      <button type="submit">Create Room</button>
+    </form>
+  </div>
+
+  <hr />
+
+  <h1>Join Private Room</h1>
+  <form method="post" action="{{url_for('quiz_room.join_room')}}">
+    <input
+      type="text"
+      id="room-code"
+      name="room_code"
+      placeholder="Enter the room code"
+      required
+    />
+    <button type="submit">Join Room</button>
+  </form>
+  <hr />
+  <!-- <div class="create-room">
+    <div>
+      <h1>Team {{teams[team_code][0]}}</h1>
+      <span> Code : {{ team_code }}</span>
+
+      <hr />
+    </div>
+    <div>
+      <ul>
+        <h2><b>Members</b></h2>
+        {% for team_member in teams[team_code][1:] %}
+        <li><h3>{{ team_member }}</h3></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div> -->
+</div>
+
+<div class="container">
+  <div class="create-room">
+    <div>
+      <h1>Team {{teams[team_code][0]}}</h1>
+      <span>Team Code : {{ team_code }}</span>
+
+      <hr />
+    </div>
+    <div>
+      <ul>
+        <h2><b>Members</b></h2>
+        {% for team_member in teams[team_code][1:] %}
+        <li><h3>{{ team_member }}</h3></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

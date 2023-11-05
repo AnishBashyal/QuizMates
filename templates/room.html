@@ -1,0 +1,109 @@
+{% extends "layout.html" %} {% block header %}
+<link
+  href="{{url_for('static', filename = 'room.css')}}"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block body %}
+
+<a href="{{url_for('main.home')}}" style="color: cornsilk"
+  ><h2 style="padding: 5px; margin: 5px"><i class="fas fa-home"></i></h2
+></a>
+<div class="container room-container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="p-3">
+        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+          <h5 class="card-header my-card">Quiz</h5>
+          <div class="card-body my-card">
+            <h5 id="question"></h5>
+            <br />
+            <div class="input-group mb-3" style="width: 500px">
+              <br />
+              <input
+                class="form-control"
+                type="text"
+                name="answer"
+                placeholder="Enter your answer"
+                id="answer"
+                required
+                style="width: 400px"
+              />
+              <div class="input-group-append">
+                <button
+                  class="btn btn-secondary"
+                  id="answerBtn"
+                  onclick="sendAnswer()"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="p-3">
+        <div class="card shadow-lg p-3 mb-5 bg-body rounded">
+          <h5 class="card-header my-card-2">Discuss</h5>
+          <div class="card-body my-card-2">
+            <div class="overflow-auto" id="messagesChat">
+              {% for message in team_messages %}
+              <span>
+                <strong> {{ message["name"] }} </strong>: {{ message["message"]
+                }}
+              </span>
+              <br />
+              {% endfor %}
+            </div>
+            <br />
+            <br />
+            <div class="input-group mb-3" style="width: 500px">
+              <input
+                type="text"
+                class="form-control"
+                name="messageChat"
+                id="messageChat"
+                required
+              />
+              <div class="input-group-append">
+                <button
+                  id="messageChatBtn"
+                  onclick="sendChatMessage()"
+                  class="btn btn-secondary"
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <table
+        class="my-5 table table-secondary table-hover table-bordered shadow-lg p-3 mb-5 bg-body rounded"
+      >
+        <thead>
+          <tr class="text-center">
+            <th colspan="3">Leader Board</th>
+          </tr>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team</th>
+            <th scope="col">Score</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboardtable"></tbody>
+      </table>
+    </div>
+  </div>
+  <h5 style="color: whitesmoke">Room : {{ room_code }}</h5>
+</div>
+
+<script src="{{ url_for('static', filename = 'chat.js') }}"></script>
+<script src="{{ url_for('static', filename = 'quiz.js') }}"></script>
+
+{% endblock %}
