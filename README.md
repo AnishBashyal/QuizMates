@@ -32,4 +32,7 @@ In the future, we plan to:
 - Refine UI
 - Develop Content Management System for users and teachers
 - To be continued.....
+<img width="1710" alt="img2" src="https://github.com/Pratisthachand/QuizMates/assets/114279513/e91f5486-9472-4d85-8d03-75aaf16c8123">
+<img width="1710" alt="img1" src="https://github.com/Pratisthachand/QuizMates/assets/114279513/2449afa8-4378-437b-be05-76c6e1a95073">
+<img width="1710" alt="img3" src="https://github.com/Pratisthachand/QuizMates/assets/114279513/7ecd6788-a4f3-4a23-b769-9caf619b4ca9">
 
