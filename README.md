@@ -4,7 +4,7 @@
 
 Our main goal was to make an app that would benefit students, teachers, and schools. Traditional classroom quizzes can often lack engagement and excitement for many students. Our aim was to find creative ways to inspire students to excel in their studies, foster collaborative learning, and elevate classroom spirit.
 
-Introducing QuizMates, a multiplayer web app enabling students to form sutdy groups, join rooms and compete in team-based quiz competitions.
+Introducing QuizMates, a multiplayer web app enabling students to form study groups, join rooms and compete in team-based quiz competitions.
 
 **What it does**
 
